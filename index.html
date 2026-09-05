@@ -140,9 +140,14 @@
         <div class="flex justify-center flex-wrap gap-2 mb-10" id="categoryFilters">
             <button class="filter-btn active px-4 py-1.5 rounded-full bg-indigo-600 text-white text-sm font-semibold shadow-md shadow-indigo-600/20 transition-all" data-category="all">全部</button>
             <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="editor">编辑器</button>
-            <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="api">API测试</button>
-            <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="design">设计资源</button>
-            <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="deploy">部署运维</button>
+	    <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="management-tools">管理</button>
+	    <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="code-tools">代码</button>
+            <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="chat-tools">聊天</button>
+	    <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="network-tools">网络</button>
+            <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="AI-tools">AI</button>
+	    <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="other-tools">其他</button>
+	    <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="video-player">视频播放器</button>
+            <button class="filter-btn px-4 py-1.5 rounded-full bg-slate-800/50 text-gray-400 border border-white/5 hover:bg-slate-700 hover:text-white text-sm transition-all" data-category="other">其他</button>
         </div>
 
         <div id="toolList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-start">
@@ -158,23 +163,22 @@
     </main>
 
     <footer class="border-t border-white/5 bg-slate-900/50 backdrop-blur-sm py-8 text-center relative z-10 mt-12">
-        <p class="text-gray-500 text-xs">&copy; 2026 DevToolkit. All rights reserved.</p>
+        <p class="text-gray-500 text-xs">&copy; 2026 tools | Qcy's Blog</p>
     </footer>
 
     <script>
         const tools = [
-            { id: 1, name: "VS Code", desc: "微软推出的轻量级但功能强大的源代码编辑器。", category: "editor", tags: ["Editor", "Microsoft"], icon: "fa-code", color: "text-blue-400", url: "#" },
-            { id: 2, name: "Postman", desc: "API 开发协作平台，简化 API 构建流程。", category: "api", tags: ["API", "Testing"], icon: "fa-rocket", color: "text-orange-400", url: "#" },
-            { id: 3, name: "Figma", desc: "基于浏览器的协作界面设计工具。", category: "design", tags: ["UI/UX", "Design"], icon: "fa-pen-nib", color: "text-purple-400", url: "#" },
-            { id: 4, name: "Docker", desc: "用于开发、运输和运行应用程序的开放平台。", category: "deploy", tags: ["Container", "DevOps"], icon: "fa-docker", color: "text-blue-500", url: "#" },
-            { id: 5, name: "GitHub Copilot", desc: "AI 结对程序员，帮助你更快地编写代码。", category: "editor", tags: ["AI", "Extension"], icon: "fa-robot", color: "text-gray-200", url: "#" },
-            { id: 6, name: "Insomnia", desc: "开源、跨平台的 API 客户端，支持 GraphQL。", category: "api", tags: ["API", "GraphQL"], icon: "fa-bed", color: "text-pink-400", url: "#" },
-            { id: 7, name: "Tailwind CSS", desc: "实用优先的 CSS 框架，快速构建现代网站。", category: "design", tags: ["CSS", "Framework"], icon: "fa-wind", color: "text-cyan-400", url: "#" },
-            { id: 8, name: "Vercel", desc: "前端开发人员平台，用于静态站点和 Serverless 函数。", category: "deploy", tags: ["Hosting", "Serverless"], icon: "fa-triangle-exclamation", color: "text-white", url: "#" },
-            { id: 9, name: "Sublime Text", desc: "一款用于代码、标记和散文的 sophisticated 文本编辑器。", category: "editor", tags: ["Editor", "Fast"], icon: "fa-file-code", color: "text-yellow-400", url: "#" },
-            { id: 10, name: "Swagger", desc: "世界上最流行的 API 工具生态系统。", category: "api", tags: ["Documentation", "API"], icon: "fa-book", color: "text-green-400", url: "#" },
-            { id: 11, name: "Unsplash", desc: "互联网上最美丽的免费图片库。", category: "design", tags: ["Images", "Free"], icon: "fa-image", color: "text-black", url: "#" },
-            { id: 12, name: "Kubernetes", desc: "生产级别的容器编排系统。", category: "deploy", tags: ["Orchestration", "Cloud"], icon: "fa-dharmachakra", color: "text-blue-300", url: "#" }
+	    { id: 1, name: "Git", desc: "一款轻量级本地源代码管理工具以及版本控制系统", category: "management-tools", tags: ["Git", "Manager"], icon: "fa-brands fa-git-alt", color: "text-orange-400", url: "https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/Git-2.55.0.5-64-bit.exe" },
+	    { id: 2, name: "VS Code", desc: "微软推出的轻量级、功能强大的源代码编辑器", category: "editor", tags: ["Editor", "Microsoft", "Code"], icon: "fa-code", color: "text-blue-400", url: "https://code.visualstudio.com/thank-you?dv=win&build=stable&v2=true" },
+	    { id: 3, name: "微信", desc: "由腾讯开发的的聊天软件，使用十分广泛，功能齐全", category: "chat-tools", tags: ["Chat", "Tencent", "WeChat"], icon: "fa-brands fa-weixin", color: "text-green-400", url: "https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin_4.1.13.exe" },
+	    { id: 4, name: "GithubDesktop", desc: "Github的桌面版，在本地更改时速度更快", category: "management-tools", tags: ["Github", "Manager", "DesktopApplication"], icon: "fa-brands fa-github", color: "text-white-400", url: "https://central.github.com/deployments/desktop/desktop/latest/win32" },
+	    { id: 5, name: "Nodejs", desc: "随时随地运行JavaScript", category: "code-tools", tags: ["Nodejs", "Code", "EnvironmentTool"], icon: "fa-brands fa-node", color: "text-green-400", url: "https://nodejs.org/dist/v24.20.0/node-v24.20.0-x64.msi" },
+	    { id: 6, name: "SublimeText", desc: "一款跨平台、轻量级、高性能的文本与代码编辑器", category: "editor", tags: ["Editor", "Code", "Text"], icon: "fa-regular fa-file-code", color: "text-orange-400", url: "https://www.sublimetext.com/download_thanks?target=win-x64" },
+	    { id: 7, name: "WattToolkit", desc: "原名Steam++，一款功能齐全的工具箱", category: "other-tools", tags: ["Toolkit"], icon: "fa-jelly-fill fa-regular fa-gear", color: "text-blue-400", url: "https://github.com/BeyondDimension/SteamTools/releases/download/3.1.0/Steam++_v3.1.0_win_x64.exe" },
+	    { id: 8, name: "WinRAR", desc: "一款老牌压缩软件", category: "other-tools", tags: ["Tool"], icon: "fa-regular fa-file", color: "text-white-400", url: "https://www.win-rar.com/fileadmin/winrar-versions/downloader/WinRAR-723sc.exe" },
+	    { id: 9, name: "豆包桌面版", desc: "字节跳动旗下AI智能助手", category: "AI-tools", tags: ["AI", "Tool"], icon: "fa-duotone fa-solid fa-robot", color: "text-white-400", url: "https://lf9-apk.ugapk.cn/package/pc/doubao_client/2025016/doubao_client_webdaoliu_doudi_online_installer_win_v2025016_cf24_1787899482.exe?v=1787899483&filename=doubao_client_77737216855800514777_ext.exe" },
+	    { id: 10, name: "PotPlayer", desc: "一款由 Kakao（原 Daum Communications）开发的功能强大、多格式支持的多媒体播放器", category: "video-player", tags: ["Viedeo", "Player"], icon: "fa-solid fa-video", color: "text-yellow-400", url: "https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe" },
+	    { id: 11, name: "CloudflareWarp", desc: "由Cloudflare开发的一款轻量级网络工具，确保快速加载网站，并保证数据的安全性", category: "network-tools", tags: ["Network", "Tool", "Cloudflare"], icon: "fa-brands fa-cloudflare", color: "text-orange-400", url: "https://downloads.cloudflareclient.com/v1/download/windows/ga" },
         ];
 
         function renderTools(data) {
